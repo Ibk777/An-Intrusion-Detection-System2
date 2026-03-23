@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JRUT IDS</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="sidebar">
+    <h2>JRUT IDS</h2>
+    <button onclick="showSection('dashboard')">Dashboard</button>
+    <button onclick="showSection('scanner')">Log Scanner</button>
+    <button onclick="exportReport()">Export Report</button>
+</div>
+
+<div class="main">
+
+    <!-- STATUS -->
+    <div class="status">
+        System Status: <span id="status">SECURE</span>
+    </div>
+
+    <!-- DASHBOARD -->
+    <section id="dashboard" class="section active">
+        <div class="stats">
+            <div class="card">Traffic: <span id="traffic">0</span></div>
+            <div class="card">Threats: <span id="threats">0</span></div>
+            <div class="card">Alerts: <span id="alerts">0</span></div>
+        </div>
+
+        <canvas id="chart"></canvas>
+
+        <h3>Live Threat Logs</h3>
+        <ul id="logList"></ul>
+    </section>
+
+    <!-- SCANNER -->
+    <section id="scanner" class="section">
+        <h2>Log Scanner</h2>
+
+        <textarea id="logInput" placeholder="Paste logs here..."></textarea>
+
+        <button onclick="scanLogs()">Scan Logs</button>
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
