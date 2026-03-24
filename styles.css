@@ -6,6 +6,12 @@ body {
     display: flex;
 }
 
+.logo {
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
 /* SIDEBAR */
 .sidebar {
     width: 200px;
