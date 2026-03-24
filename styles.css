@@ -1,9 +1,11 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background: url("background.jpg") no-repeat center center/cover;
+    background: radial-gradient(circle, #020617, #0f172a);
     color: #e2e8f0;
+    display: flex;
 }
+
 /* SIDEBAR */
 .sidebar {
     width: 200px;
